@@ -13,11 +13,6 @@ if !exists("g:ackprg")
 	let g:ackprg="ack -H --nocolor --nogroup --column"
 endif
 
-" Height of quickfix window to open
-if !exists("g:ackWinHeight")
-	let g:ackWinHeight=20
-endif
-
 function! s:Ack(cmd, args)
     redraw
     echo "Searching ..."
@@ -41,9 +36,9 @@ function! s:Ack(cmd, args)
     endtry
 
     if a:cmd =~# '^l'
-        botright lopen g:ackWinHeight
+        botright lopen 20
     else
-        botright copen g:ackWinHeight
+        botright copen 20
     endif
 
     exec "nnoremap <silent> <buffer> q :ccl<CR>" 
