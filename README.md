@@ -50,6 +50,15 @@ Otherwise, the file ack.vim goes in ~/.vim/plugin, and the ack.txt file belongs 
 
 afterwards.
 
+## Configuration ##
+
+You can set the ack executable to use by setting g:ackprg. For example since Ubuntu installs ack as ack-grep, you would add a line such as:
+
+    let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+To your ~/.vimrc. You can also set the height of the quickfix menu by setting g:ackWinHeight. To set the quickfix window height to 30, add the following to your ~/.vimrc:
+
+    let g:ackWinHeight=30
 
 ## Usage ##
 
