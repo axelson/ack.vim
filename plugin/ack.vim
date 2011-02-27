@@ -41,9 +41,9 @@ function! s:Ack(cmd, args)
     endtry
 
     if a:cmd =~# '^l'
-        botright lopen g:ackWinHeight
+        execute "botright lopen " . g:ackWinHeight
     else
-        botright copen g:ackWinHeight
+        execute "botright copen " . g:ackWinHeight
     endif
 
     exec "nnoremap <silent> <buffer> q :ccl<CR>" 
