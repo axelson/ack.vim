@@ -36,9 +36,9 @@ function! s:Ack(cmd, args)
     endtry
 
     if a:cmd =~# '^l'
-        botright lopen
+        botright lopen 20
     else
-        botright copen
+        botright copen 20
     endif
 
     exec "nnoremap <silent> <buffer> q :ccl<CR>" 
